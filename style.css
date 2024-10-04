@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border:1px solid red; */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0D1B2A;
+  color: #E0E1DD;
+  line-height: 1.6;
+  
+}
+
+/* Styling Header */
+header {
+  background-color: #1B263B;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+header .navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  color: #E0E1DD;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #E0E1DD;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #FF7F11;
+}
+
+.auth-buttons {
+  display: flex;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 10px 25px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login {
+  background-color: transparent;
+  color: #FF7F11;
+  border: 2px solid #FF7F11;
+}
+
+.signup {
+  background-color: #FF7F11;
+  color: #1B263B;
+}
+
+.login:hover,
+.signup:hover {
+  background-color: transparent;
+  color: #FF7F11;
+  border-color: #FF7F11;
+}
+
+/* Responsive Header */
+
+
+@media screen and (min-width: 200px){
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  nav ul {
+    /* flex-direction: column; */
+    width: 100%;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .auth-buttons button {
+    width: 50%;
+    margin: 5px 0;
+  }
+
+  .logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Styling Section Hero */
+.hero {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.hero h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+#searchBar {
+  padding: 12px;
+  width: 60%;
+  font-size: 18px;
+  background-color: #1B263B;
+  border: 2px solid #E0E1DD;
+  color: #E0E1DD;
+  border-radius: 50px;
+}
+
+/* Styling Movie Section */
+.movies-section {
+  padding: 5px;
+}
+
+.movies-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #FF7F11;
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+  display: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #FF7F11;
+  border-radius: 10px;
+}
+
+.movie-card {
+  min-width: 180px;
+  max-width: 180px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.movie-card h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #FF7F11;
+}
+
+/* Styling Footer */
+footer {
+  text-align: center;
+  background-color: #1B263B;
+  color: #E0E1DD;
+  padding: 20px;
+  font-size: 14px;
+}
+
+@media  screen and (min-width: 768px) {
+  header .navbar {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  nav {
+    width: 30%;
+   justify-content: center;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .auth-buttons {
+    align-items: flex-end;
+    width: 30%;
+  }
+  
+}
